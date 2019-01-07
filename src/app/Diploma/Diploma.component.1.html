@@ -1,0 +1,42 @@
+<div class="container">
+	<div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+		<strong>Error:</strong> {{errorMessage}}
+  </div>
+  
+  
+  
+  <div class="row">
+    <div class="col-md-9">
+        <h1 class="asset-title" id='assetName'>Diploma</h1>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <dir>
+          <label>Mã số bằng</label>
+          <input type="text" value={{asset.diplomaId}} readonly>
+      </dir>
+
+      <dir>
+          <label>Ngày cấp</label>
+          <input type="text" value={{asset.date}} readonly>
+      </dir>
+
+      <dir>
+          <label>Tên trường</label>
+          <input type="text" value={{asset.univeristy}} readonly>
+      </dir>
+
+      <dir>
+          <label>Người nhận</label>
+          <input type="text" value={{asset.student}} readonly>
+      </dir>
+
+      <dir>
+          <label>Chương trình đào tạo</label>
+          <input type="text" value={{asset.program}} readonly>
+      </dir>
+    </div>
+  </div>
+</div>
