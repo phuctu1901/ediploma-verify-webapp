@@ -20,17 +20,18 @@ import { UniversityService } from '../University/University.service'
 import { ProgramService} from '../Program/Program.service'
 import { Diploma} from '../org.diploma'
 import 'rxjs/add/operator/toPromise';
-
+declare var $: any;
 @Component({
   selector: 'app-diploma',
   templateUrl: './Diploma.component.html',
-  styleUrls: ['../home/home.component.css'],
+  styleUrls: ['./Diploma.component.css'],
   providers: [DiplomaService, StudentService, UniversityService, ProgramService ]
 })
+
 export class DiplomaComponent implements OnInit {
 
   myForm: FormGroup;
-
+  
   private result;
   private allAssets;
   private asset;
@@ -64,6 +65,7 @@ export class DiplomaComponent implements OnInit {
       this.info = result;
 
       var student = result.student.toString();
+    
       var studentId = student.substr(student.indexOf("#") + 1).toString(); // Contains 24 //
 
       var university = result.university.toString();
@@ -110,7 +112,6 @@ export class DiplomaComponent implements OnInit {
       this.errorMessage = null;
       this.info.student = result;
     console.log(this.info);
-
     })
     .catch((error) => {
       if (error === 'Server error') {
@@ -121,13 +122,18 @@ export class DiplomaComponent implements OnInit {
         this.errorMessage = error;
       }
     });
+
+    $("#successModal").modal('show');
+
     })
     .catch((error) => {
+      this.info=null;
+
       if (error === 'Server error') {
         this.errorMessage = 'Could not connect to REST server. Please check your configuration details';
       } else if (error === '404 - Not Found') {
         this.errorMessage = 'Không tìm thấy thông tin';
-        console.log('Không tìm thấy thông tin')
+        $("#failModal").modal('show');
       } else {
         this.errorMessage = error;
       }

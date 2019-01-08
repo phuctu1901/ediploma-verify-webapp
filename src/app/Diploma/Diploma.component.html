@@ -13,5 +13,99 @@
           </div>
         </div>
       </form>
-    </div>
+    </div> 
+
+      <!-- Modal -->
+      <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="exampleModalLabel">Thông tin bằng</h3>
+            </div>
+            <div class="modal-body">
+                <div class="limiter">
+                    <div class="container-table100">
+                      <div class="wrap-table100">
+                        <div class="table100 ver1 m-b-110">
+                          <table data-vertable="ver1">
+                            <tbody>
+                              <tr class="row100">
+                                <td class="column100 column1" data-column="column1">Họ và tên: </td>
+                                <td class="column100 column2" data-column="column2">{{info.student.firstName + info.student.lastName}}</td>
+                              </tr>
+                
+                              <tr class="row100">
+                                  <td class="column100 column1" data-column="column1">Ngày sinh: </td>
+                                  <td class="column100 column2" data-column="column2">19/01/1997</td>
+                              </tr>
+                
+                              <tr class="row100">
+                                  <td class="column100 column1" data-column="column1">Số chứng minh: </td>
+                                  <td class="column100 column2" data-column="column2">206027758</td>
+                              </tr>
+                
+                              <tr class="row100">
+                                  <td class="column100 column1" data-column="column1">Trường Đại học:</td>
+                                  <td class="column100 column2" data-column="column2">Học viện Kỹ thuật Quân sự</td>
+                              </tr>
+                
+                              <tr class="row100">
+                                  <td class="column100 column1" data-column="column1">Loại bằng: </td>
+                                  <td class="column100 column2" data-column="column2">Kỹ sư</td>
+                              </tr>
+                
+                              <tr class="row100">
+                                  <td class="column100 column1" data-column="column1">Ngành: </td>
+                                  <td class="column100 column2" data-column="column2">Diễn xuất</td>
+                              </tr>
+
+                              <tr class="row100">
+                                  <td class="column100 column1" data-column="column1">Hình thức đào tạo: </td>
+                                  <td class="column100 column2" data-column="column2">Chính quy</td>
+                              </tr>
+                
+                              <tr class="row100">
+                                  <td class="column100 column1" data-column="column1">Xếp loại tốt nghiệp: </td>
+                                  <td class="column100 column2" data-column="column2">Xuất sắc</td>
+                              </tr>
+                
+                              <tr class="row100">
+                                  <td class="column100 column1" data-column="column1">Năm tốt nghiệp: </td>
+                                  <td class="column100 column2" data-column="column2">2020</td>
+                              </tr>
+
+                              <tr class="row100">
+                                  <td class="column100 column1" data-column="column1">Mã số bằng: </td>
+                                  <td class="column100 column2" data-column="column2">1012012XDA</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     <!-- Modal -->
+     <div class="modal fade" id="failModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="exampleModalLabel">THÔNG BÁO</h3>
+            </div>
+            <div class="modal-body">
+                <h1>KHÔNG TÌM THẤY THÔNG TIN BẰNG</h1>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
   </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
